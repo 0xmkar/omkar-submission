@@ -1,5 +1,7 @@
 # TokenFactory Smart Contract API Integration
 
+### Note : I've kept the structure and format of the code same, even though it could be a lot better
+
 ## Overview
 
 This project implements a RESTful API that integrates with the `TokenFactory.sol` smart contract deployed on Ethereum Sepolia testnet. The API provides endpoints to fetch various information from the smart contract, with all results displayed in the console for verification.
@@ -77,12 +79,12 @@ Script ran successfully.
 
 The API is implemented at `/api/omkar` with the following endpoints:
 
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/omkar/contract-info` | GET | Get basic contract information (address, network, RPC URL) |
-| `/api/omkar/decimal` | GET | Get the current decimal value from the contract |
-| `/api/omkar/token-list` | GET | Get list of all tokens created by the factory |
-| `/api/omkar/all-info` | GET | Get all contract information in a single call |
+| Endpoint                   | Method | Description                                                |
+| -------------------------- | ------ | ---------------------------------------------------------- |
+| `/api/omkar/contract-info` | GET    | Get basic contract information (address, network, RPC URL) |
+| `/api/omkar/decimal`       | GET    | Get the current decimal value from the contract            |
+| `/api/omkar/token-list`    | GET    | Get list of all tokens created by the factory              |
+| `/api/omkar/all-info`      | GET    | Get all contract information in a single call              |
 
 ### Technology Stack
 
@@ -147,6 +149,7 @@ echo -e "\n\nDone!"
 **Request**: `GET /api/omkar/contract-info`
 
 **Response**:
+
 ```json
 {
   "success": true,
@@ -162,6 +165,7 @@ echo -e "\n\nDone!"
 ```
 
 **Console Output**:
+
 ```
 === CONTRACT INFO ===
 Contract Address: 0x3585FFdcFa248c89322Ba347e4f3e85aD3aB8Fe9
@@ -176,6 +180,7 @@ RPC URL: https://ethereum-sepolia.publicnode.com
 **Request**: `GET /api/omkar/decimal`
 
 **Response**:
+
 ```json
 {
   "success": true,
@@ -186,6 +191,7 @@ RPC URL: https://ethereum-sepolia.publicnode.com
 ```
 
 **Console Output**:
+
 ```
 === DECIMAL VALUE ===
 Decimal: 0
@@ -197,6 +203,7 @@ Decimal: 0
 **Request**: `GET /api/omkar/token-list`
 
 **Response**:
+
 ```json
 {
   "success": true,
@@ -208,6 +215,7 @@ Decimal: 0
 ```
 
 **Console Output**:
+
 ```
 === TOKEN LIST ===
 Number of Tokens: 0
@@ -219,6 +227,7 @@ Number of Tokens: 0
 **Request**: `GET /api/omkar/all-info`
 
 **Response**:
+
 ```json
 {
   "success": true,
@@ -241,6 +250,7 @@ Number of Tokens: 0
 ```
 
 **Console Output**:
+
 ```
 === ALL CONTRACT INFORMATION ===
 Contract Address: 0x3585FFdcFa248c89322Ba347e4f3e85aD3aB8Fe9
@@ -287,11 +297,13 @@ SEPOLIA_RPC_URL=https://ethereum-sepolia.publicnode.com
 ### Running the Server
 
 1. Install dependencies:
+
    ```bash
    npm install
    ```
 
 2. Start the server:
+
    ```bash
    node server.js
    ```
@@ -310,31 +322,35 @@ SEPOLIA_RPC_URL=https://ethereum-sepolia.publicnode.com
 ### Completed Tasks
 
 ✅ **Smart Contract Deployment**
+
 - Successfully deployed `TokenFactory.sol` on Ethereum Sepolia testnet
 - Contract verified and accessible at `0x3585FFdcFa248c89322Ba347e4f3e85aD3aB8Fe9`
 
 ✅ **API Implementation**
+
 - Created RESTful API endpoints at `/api/omkar`
 - Integrated ethers.js for blockchain interaction
 - Implemented 4 endpoints to fetch contract information
 
 ✅ **Console Output**
+
 - All API calls log detailed information to console
 - Results are displayed in a structured, readable format
 
 ✅ **Testing**
+
 - Created comprehensive test script
 - All endpoints tested and verified working
 - JSON responses validated
 
 ### API Endpoints Summary
 
-| Endpoint | Purpose | Status |
-|----------|---------|--------|
+| Endpoint                   | Purpose                               | Status     |
+| -------------------------- | ------------------------------------- | ---------- |
 | `/api/omkar/contract-info` | Get contract address and network info | ✅ Working |
-| `/api/omkar/decimal` | Get decimal value from contract | ✅ Working |
-| `/api/omkar/token-list` | Get list of created tokens | ✅ Working |
-| `/api/omkar/all-info` | Get all information in one call | ✅ Working |
+| `/api/omkar/decimal`       | Get decimal value from contract       | ✅ Working |
+| `/api/omkar/token-list`    | Get list of created tokens            | ✅ Working |
+| `/api/omkar/all-info`      | Get all information in one call       | ✅ Working |
 
 ### Contract Information
 
