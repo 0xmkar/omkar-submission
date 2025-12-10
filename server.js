@@ -15,6 +15,7 @@ app.use('/api/users', require('./server/routes/api/users'));
 app.use('/api/auth', require('./server/routes/api/auth'));
 app.use('/api/profile', require('./server/routes/api/profile'));
 app.use('/api/posts', require('./server/routes/api/posts'));
+app.use('/api/omkar', require('./server/routes/api/omkar'));
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
